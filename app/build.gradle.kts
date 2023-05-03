@@ -1,9 +1,18 @@
+import org.jetbrains.kotlin.konan.properties.Properties
+import java.io.FileInputStream
+
 plugins {
     id("com.android.application")
     kotlin("android")
     kotlin("kapt")
     id("dagger.hilt.android.plugin")
 }
+
+val devProperties = Properties()
+devProperties.load(FileInputStream(rootProject.file("dev.properties")))
+
+val prodProperties = Properties()
+prodProperties.load(FileInputStream(rootProject.file("prod.properties")))
 
 android {
     namespace = "com.saumya.practicaltaskc"
@@ -23,12 +32,16 @@ android {
     }
 
     buildTypes {
+        debug {
+            buildConfigField("String", "API_URL", "\"${devProperties["BASE_URL"]}\"")
+        }
         release {
             isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            buildConfigField("String", "API_URL", "\"${prodProperties["BASE_URL"]}\"")
         }
     }
     compileOptions {
@@ -40,6 +53,7 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.4.2"
