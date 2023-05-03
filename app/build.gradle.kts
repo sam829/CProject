@@ -80,6 +80,7 @@ dependencies {
     implementation("androidx.compose.ui:ui-graphics")
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
+    implementation("androidx.compose.runtime:runtime-rxjava3:1.4.3")
 
     // Test
     testImplementation("junit:junit:4.13.2")
@@ -100,13 +101,14 @@ dependencies {
     // Room
     val roomVersion = "2.4.1"
     implementation("androidx.room:room-ktx:$roomVersion")
+    implementation("androidx.room:room-rxjava3:$roomVersion")
     kapt("androidx.room:room-compiler:$roomVersion")
 
     // Retrofit
     val retrofitVersion = "2.9.0"
     implementation("com.squareup.retrofit2:retrofit:$retrofitVersion")
     implementation("com.squareup.retrofit2:converter-gson:$retrofitVersion")
-    implementation("com.squareup.retrofit2:adapter-rxjava2:2.3.0")
+    implementation("com.squareup.retrofit2:adapter-rxjava3:$retrofitVersion")
 
     // RxJava
     implementation("io.reactivex.rxjava3:rxandroid:3.0.2")

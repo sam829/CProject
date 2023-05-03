@@ -1,11 +1,9 @@
-package com.saumya.practicaltaskc.data.source.remote.response
+package com.saumya.practicaltaskc.data.source.remote.response.random_user
 
-
-import com.google.gson.annotations.SerializedName
 import androidx.annotation.Keep
 
 @Keep
-data class Login(
+data class LoginResponse(
     val md5: String,
     val password: String,
     val salt: String,

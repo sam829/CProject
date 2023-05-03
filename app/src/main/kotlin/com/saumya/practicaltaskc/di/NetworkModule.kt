@@ -7,11 +7,14 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import retrofit2.Retrofit
-import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
+import retrofit2.adapter.rxjava3.RxJava3CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.create
 import javax.inject.Singleton
 
+/**
+ * This module helps with providing retrofit builder [Retrofit] and NetworkService instance [NetworkService]
+ */
 @Module
 @InstallIn(SingletonComponent::class)
 class NetworkModule {
@@ -20,10 +23,10 @@ class NetworkModule {
     fun providesRetrofit(): Retrofit = Retrofit.Builder()
         .baseUrl(BuildConfig.API_URL)
         .addConverterFactory(GsonConverterFactory.create())
-        .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+        .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
         .build()
 
     @Provides
     @Singleton
-    fun provideNetworkService(retrofit: Retrofit) : NetworkService = retrofit.create()
+    fun provideNetworkService(retrofit: Retrofit): NetworkService = retrofit.create()
 }
