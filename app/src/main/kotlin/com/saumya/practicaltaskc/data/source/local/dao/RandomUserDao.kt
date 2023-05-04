@@ -21,7 +21,7 @@ interface RandomUserDao {
     fun deleteUser(randomUserCache: RandomUserCache)
 
     @Query("SELECT * FROM random_user")
-    fun getUser(): Observable<RandomUserCache>
+    fun getUser(): RandomUserCache?
 
     @Query("DELETE FROM random_user")
     fun clearAllUsers()

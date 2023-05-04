@@ -81,6 +81,7 @@ dependencies {
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
     implementation("androidx.compose.runtime:runtime-rxjava3:1.4.3")
+    implementation("androidx.constraintlayout:constraintlayout-compose:1.0.1")
 
     // Test
     testImplementation("junit:junit:4.13.2")
@@ -113,6 +114,9 @@ dependencies {
     // RxJava
     implementation("io.reactivex.rxjava3:rxandroid:3.0.2")
     implementation("io.reactivex.rxjava3:rxjava:3.1.5")
+
+    // Coil
+    implementation("io.coil-kt:coil-compose:2.3.0")
 }
 
 // Allow references to generated code
