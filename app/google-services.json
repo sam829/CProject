@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "462124997720",
+    "firebase_url": "https://seconddemo-f3f0c-default-rtdb.firebaseio.com",
+    "project_id": "seconddemo-f3f0c",
+    "storage_bucket": "seconddemo-f3f0c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:462124997720:android:ea7a1aa80380f68400fe2d",
+        "android_client_info": {
+          "package_name": "com.saumya.practicaltaskc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "462124997720-k9cj4r7brgi8srv77s4fc80av57k057t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAOdvCdnbfr9w3coOGKATZqsRdyg-g1Fo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "462124997720-hc9l3uv9bpg4t1ql0bvv5f04deaojn72.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
